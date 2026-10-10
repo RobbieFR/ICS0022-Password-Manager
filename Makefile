@@ -1,2 +1,2 @@
 main : 
-	gcc pass.c -o pass -Wall --extra-warnings
+	gcc -Wall -Wextra -Iinclude src/cli.c src/main.c -o passmanager
