@@ -29,10 +29,13 @@ The application is designed to run locally and can be compiled using a standard 
 1. Clone this repository.
 2. Navigate to the project root directory in your terminal.
 3. Compile the project :
-   ```bash
-   make
-   ```
+```bash
+make
+```
 4. Run the executable:
 ```
-./pass
+./passmanager
 ```
+
+
+install sudo apt update && sudo apt install -y libsqlite3-dev libsodium-dev
