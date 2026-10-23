@@ -124,3 +124,25 @@ int cli_get_vault_command(char *url, char *username) {
     printf("[!] Unknown command. Options:\n%s", MAIN_MENU);
     return -1;
 }
+
+void read_hidden_input(const char *prompt, char *buf, int max_len) {
+    printf("%s", prompt);
+    fflush(stdout);
+
+    struct termios oldt, newt;
+    tcgetattr(STDIN_FILENO, &oldt);
+    newt = oldt;
+    newt.c_lflag &= ~ECHO; // Disable echo
+
+    tcsetattr(STDIN_FILENO, TCSANOW, &newt);
+    
+    if (fgets(buf, max_len, stdin) != NULL) {
+        size_t len = strlen(buf);
+        if (len > 0 && buf[len - 1] == '\n') {
+            buf[len - 1] = '\0';
+        }
+    }
+
+    tcsetattr(STDIN_FILENO, TCSANOW, &oldt);
+    printf("\n");
+}

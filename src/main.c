@@ -3,6 +3,19 @@
 #include "cli.h"
 
 int main(void) {
+    
+
+    //////////////// TEMP TEST (HIDDEN PASS) /////////////////////
+    char test_pass[128];
+    read_hidden_input("Enter a password : ", test_pass, sizeof(test_pass));
+    printf("Pass: %s (Will disapear in 3sec) \r", test_pass);
+    fflush(stdout);
+    sleep(3);
+    printf("Pass: [HIDDEN]          \n");
+    /////////////////////////////////////////////////////////////
+
+
+
     char username[MAX_USERNAME_LEN] = {0};
     char url[MAX_URL_LEN] = {0};
 
