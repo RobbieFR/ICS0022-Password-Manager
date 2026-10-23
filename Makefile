@@ -2,7 +2,7 @@ CC = gcc
 CFLAGS = -Wall -Wextra -Iinclude
 LIBS = -lsqlite3 -lsodium
 
-SRC = src/main.c src/cli.c
+SRC = src/main.c src/cli.c src/crypto.c
 OBJ = $(SRC:.c=.o)
 TARGET = passmanager
 
