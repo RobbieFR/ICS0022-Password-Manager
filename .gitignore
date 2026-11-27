@@ -2,6 +2,8 @@
 *.o
 *.db
 *.log
-passmanager
+password_manager
 vendor/test
 vendor/test.db
+tests/test_suite
+tests/test_suite_*

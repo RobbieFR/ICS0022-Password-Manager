@@ -34,8 +34,5 @@ make
 ```
 4. Run the executable:
 ```
-./passmanager
+./password_manager
 ```
-
-
-install sudo apt update && sudo apt install -y libsqlite3-dev libsodium-dev
